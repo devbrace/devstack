@@ -25,4 +25,4 @@ RUN docker-php-ext-install -j$(nproc) \
   pdo \
   pdo_mysql
 
-RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --2.5.5
+RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --2.5.8
