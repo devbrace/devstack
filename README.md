@@ -13,3 +13,18 @@ Run this command from the project root directory.
 ```shell
 docker compose up -d 
 ```
+
+### Document root
+
+Current project root is
+
+``<project>/public``
+
+#### Do you want use ``/`` as the document root?
+
+Comment 4. and 5. line in the ``./docker/Dockerfile``
+
+```dockerfile
+COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
+RUN a2enmod rewrite
+```
