@@ -5,6 +5,12 @@
 - npm v9.7.1
 - MariaDB 10
 
+## How to use this?
+
+Just copy these files into your project.
+
+Does your project contains .env file? Copy the environment variables from .env and paste
+them to your existing file.
 
 ### Start containers
 
@@ -16,9 +22,7 @@ docker compose up -d
 
 ### Document root
 
-Current project root is
-
-``<project>/public``
+Current project document root is ``<project>/public``
 
 #### Do you want use ``/`` as the document root?
 

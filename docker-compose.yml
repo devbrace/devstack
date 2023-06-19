@@ -3,7 +3,7 @@ name: brace-app
 
 services:
   web:
-    container_name: "web"
+    container_name: "${APP_NAME}-web"
     build:
       context: ./docker
       dockerfile: "Dockerfile"
@@ -21,7 +21,7 @@ services:
       - mariadb
 
   mariadb:
-    container_name: "db"
+    container_name: "${APP_NAME}-db"
     image: 'mariadb:10'
     ports:
       - '3306:3306'
