@@ -37,3 +37,19 @@ RUN a2enmod rewrite
 ### Need to use composer or npm?
 
 Please run commands from the container. This can avoid issues with different versions of these tools.
+
+### Xdebug
+
+It should be working for mac, linux and windows.
+
+#### PHPStorm settings:
+
+**Host:** localhost
+
+#### Path mapping:
+
+```<project-root>: /var/www/html```
+
+If you have a ``public`` directory, map it as well:
+
+``<project-root>/public: /var/www/html/public``
