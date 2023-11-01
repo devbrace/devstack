@@ -45,7 +45,8 @@ RUN apt-get update \
     php8.2-ldap \
     php8.2-memcached \
     php8.2-pcov \
-    php8.2-xdebug
+    php8.2-xdebug \
+    php8.2-curl
 
 RUN mkdir -p /etc/apt/keyrings \
     && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg \
