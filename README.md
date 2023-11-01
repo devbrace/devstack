@@ -2,54 +2,67 @@
 
 - PHP 8.2 - apache
 - MariaDB 10
-- node v18.16.0
-- npm v9.7.1
-- composer v2.5.8
+- node v18.18.2
+- npm v10.2.2
+- composer v2.6.5
 
 ## How to use this?
 
-Just copy these files into your project.
+You probably want use these images in another project without modification. So you can just build the images and use them
+in another project.
 
-Does your project contains .env file? Copy the environment variables from .env and paste
-them to your existing file.
+If you want to somehow modify it, you can copy everything in a image directory which do you want to use in your project. 
+If you want work with laravel - copy everything in ``./laravel`` directory.
 
-### Start containers
+## Images
 
-Run this command from the project root directory.
+In the braces is the image name.
+
+### Laravel [brace-laravel]
+
+Image ready for the development in Laravel.
+
+Build image:
 
 ```shell
-docker compose up -d 
+sh build-laravel.sh
 ```
 
-### Document root
+___
 
-Current project document root is ``<project>/public``
+### PHP [brace-php]
 
-#### Do you want use ``/`` as the document root?
+Basic PHP image for building apps.
 
-Comment 4. and 5. line in the ``./docker/Dockerfile``
+Build image:
 
-```dockerfile
-COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
-RUN a2enmod rewrite
+```shell
+sh build-php.sh
 ```
 
-### Need to use composer or npm?
+INFO: Document root is set to /.public
 
-Please run commands from the container. This can avoid issues with different versions of these tools.
+___
 
-### Xdebug
+### PHP - simple [brace-php-simple]
 
-It should be working for mac, linux and windows.
+The same as the PHP image but the document root is not **public** directory.
 
-#### PHPStorm settings:
+Build image:
 
-**Host:** localhost
+```shell
+sh build-php-simple.sh
+```
 
-#### Path mapping:
+___
 
-```<project-root>: /var/www/html```
+### You can build all the images with the command:
+```shell
+sh build-all.sh
+```
 
-If you have a ``public`` directory, map it as well:
+___
 
-``<project-root>/public: /var/www/html/public``
+### xDebug
+
+Use 0.0.0.0 as the host for the xDebug.
