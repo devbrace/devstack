@@ -1,18 +1,19 @@
 # Brace development stack
 
+Every web image have 
+
 - PHP 8.2 - apache
-- MariaDB 10
 - node v18.18.2
 - npm v10.2.2
 - composer v2.6.5
 
 ## How to use this?
 
-You probably want use these images in another project without modification. So you can just build the images and use them
+You probably want to use these images in another project without modification. So you can just build the images and use them
 in another project.
 
-If you want to somehow modify it, you can copy everything in a image directory which do you want to use in your project. 
-If you want work with laravel - copy everything in ``./laravel`` directory.
+If you want to somehow modify it, you can copy everything in an image directory which do you want to use in your project. 
+If you want work with laravel - copy everything from ``./laravel`` directory.
 
 ## Images
 
