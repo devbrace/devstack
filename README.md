@@ -57,6 +57,16 @@ sh build-php-simple.sh
 
 ___
 
+### PHP QA [brace-php-qa]
+
+Simple docker image for running QA tools
+
+```shell
+sh build-php-qa.sh
+```
+
+___
+
 ### You can build all the images with the command:
 ```shell
 sh build-all.sh
