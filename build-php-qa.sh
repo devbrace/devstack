@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd laravel/docker
+cd php-qa/docker
 
 docker build -t brace-php-qa .
 
